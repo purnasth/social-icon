@@ -1,0 +1,98 @@
+:root {
+  --clr: hsla(259, 36%, 47%, 1);
+}
+body {
+  background-color: var(--clr);
+}
+
+.menu {
+  position: relative;
+}
+.menu span {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: var(--clr);
+  /* padding: 15px; */
+  border: 3px solid white;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.menu a svg.hidden {
+  visibility: hidden;
+}
+.menu a {
+  width: 20px;
+  height: 20px;
+  padding: 15px;
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.menu a:nth-child(1).show {
+  transform: rotate(0deg) translate(100px) rotate(0deg);
+}
+.menu a:nth-child(2).show {
+  transform: rotate(45deg) translate(100px) rotate(-45deg);
+}
+.menu a:nth-child(3).show {
+  transform: rotate(90deg) translate(100px) rotate(-90deg);
+}
+
+@keyframes linkedin {
+  0% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40%,
+  65% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(-3px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(-1px);
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  to {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.github {
+  background: url("../icon/github.gif");
+}
+.linkedin {
+  background: url("../icon/linkedin.gif");
+}
+.facebook {
+  background: url("../icon/facebook.gif");
+}
